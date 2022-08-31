@@ -14,9 +14,23 @@ async function loadPage(page) {
 
 loadPage('signin.html');
 
+function resetLink(linkId) {
+  console.log('reset' + linkId);
+  console.log(document.getElementsByClassName('nav-link').length);
+  for (ele of document.getElementsByClassName('nav-link')) {
+    ele.className = 'nav-link';
+  }
+  let currentElement = document.getElementById(linkId);
+  currentElement.className = 'nav-link active';
+
+}
+
 function route() {
-  link = location.hash.replace('#','');
-  console.log(link);
+  let link = location.hash.replace('#','');
+  let linkId = link.replace('.html','');
+  console.log('page: ', link);
+  console.log('pageId: ', linkId);
+  resetLink(linkId);
   loadPage(link);
 }
 
