@@ -7,4 +7,5 @@ to avoid refreshing the whole page.<br/>
 
 I also apply dynamic color effect to differentiate clicked link and others.
 
-# Link to the demo page
+### Link to the demo page
+https://gushiwen.github.io/WebPageNavigation/
